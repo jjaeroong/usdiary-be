@@ -8,6 +8,7 @@
   "servers": [
     {
       "url": "http://localhost:3001"
+<<<<<<< HEAD
 
     }
   ],
@@ -23,10 +24,26 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+=======
+    }
+  ],
+  "paths": {
+    "/diary/new/{user_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
             }
           }
         ],
         "responses": {
+<<<<<<< HEAD
           "200": {
             "description": "성공적으로 일기를 가져왔습니다.",
             "content": {
@@ -42,10 +59,15 @@
           },
           "default": {
             "description": "기타 오류"
+=======
+          "default": {
+            "description": ""
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
           }
         }
       }
     },
+<<<<<<< HEAD
     "/diaries": {
       "post": {
         "description": "새로운 일기를 생성합니다.",
@@ -69,10 +91,83 @@
                 }
               }
             }
+=======
+    "/diary/get/{user_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/diary/{user_id}": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
           },
           "500": {
             "description": "Internal Server Error"
           }
+<<<<<<< HEAD
+=======
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "diary_title": {
+                    "example": "any"
+                  },
+                  "diary_content": {
+                    "example": "any"
+                  },
+                  "diary_cate": {
+                    "example": "any"
+                  },
+                  "access_level": {
+                    "example": "any"
+                  },
+                  "board_id": {
+                    "example": "any"
+                  },
+                  "diary_emotion": {
+                    "example": "any"
+                  },
+                  "cate_num": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
         }
       }
     },"/users/login": {
@@ -159,6 +254,7 @@
     }
   },
   "components": {
+<<<<<<< HEAD
     "schemas": {
       "Diary": {
         "type": "object",
@@ -282,12 +378,22 @@
         ]
       }
     },
+=======
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
         "scheme": "bearer",
+<<<<<<< HEAD
+=======
+        "in": "header",
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
         "bearerFormat": "JWT"
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 666bde61fa82512ffdf39a98642b98700e857b31
